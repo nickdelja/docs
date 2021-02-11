@@ -53,7 +53,7 @@ func AddUser(c *fiber.Ctx) {
 
     if err := c.BodyParser(user); err != nil {
         c.Status(fiber.StatusInternalServerError).JSON(fiber.Map{
-            message: err.Error(),
+            "message": err.Error(),
         })
         return
     }
